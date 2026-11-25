@@ -1,0 +1,36 @@
+{
+  "site": {
+    "name": "Sample Supply Co.",
+    "tagline": "Placeholder storefront for your future product catalogue",
+    "description": "A neutral demo storefront. Product data lives in local JSON files and is easy to replace.",
+    "currency": "USD",
+    "locale": "en-US",
+    "productsPerPage": 6,
+    "featuredLimit": 6,
+    "hero": {
+      "eyebrow": "Placeholder storefront",
+      "heading": "A simple place to browse and sell your products",
+      "text": "Every page here runs on placeholder data. Replace the files in /data with your own products, then update the branding and contact details below.",
+      "primaryCta": { "label": "Browse products", "href": "products.html" },
+      "secondaryCta": { "label": "Read the FAQ", "href": "faq.html" },
+      "note": "Product discovery only — no account, cart or checkout."
+    },
+    "featured": {
+      "heading": "Featured products",
+      "text": "A short selection taken from the catalogue. Mark items with \"featured\": true in data/products.json.",
+      "emptyText": "No products are marked as featured yet. Add \"featured\": true to items in data/products.json."
+    },
+    "footer": {
+      "blurb": "Placeholder storefront content. Update the branding, copy and contact details to match your business.",
+      "legal": "All rights reserved."
+    },
+    "contact": {
+      "email": "hello@example.com",
+      "phone": "+1 (555) 010-0000",
+      "phoneHref": "+15550100000",
+      "address": "123 Placeholder Street, Suite 100, Sample City, ST 00000",
+      "hours": "Monday–Friday, 9:00–17:00",
+      "responseTime": "We usually reply within two business days."
+    }
+  }
+}

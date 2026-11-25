@@ -1,0 +1,53 @@
+{
+  "lastUpdated": "2026-11-24",
+  "faqs": [
+    {
+      "id": "faq-orders",
+      "category": "Orders",
+      "question": "How do I place an order?",
+      "answer": "This is placeholder copy. Replace it in data/faqs.json with the steps customers follow to order from your store. Keep answers short and link to a page when more detail is needed."
+    },
+    {
+      "id": "faq-order-status",
+      "category": "Orders",
+      "question": "How can I check the status of an order?",
+      "answer": "Placeholder answer. Describe how customers track an order, which reference number they need, and how quickly they can expect an update."
+    },
+    {
+      "id": "faq-shipping",
+      "category": "Shipping",
+      "question": "Which delivery options are available?",
+      "answer": "Placeholder answer. List the delivery methods you offer, the estimated timeframes and any delivery costs. Replace this text with your real service details."
+    },
+    {
+      "id": "faq-international",
+      "category": "Shipping",
+      "question": "Do you ship internationally?",
+      "answer": "Placeholder answer. State which regions you ship to, whether duties or taxes apply, and any restrictions customers should know about."
+    },
+    {
+      "id": "faq-returns",
+      "category": "Returns",
+      "question": "What is your return policy?",
+      "answer": "Placeholder answer. Describe the return window, the condition items must be in, who pays for return shipping and how refunds are processed."
+    },
+    {
+      "id": "faq-damaged",
+      "category": "Returns",
+      "question": "What should I do if an item arrives damaged?",
+      "answer": "Placeholder answer. Explain how customers should report a damaged item, which photos or details to include, and how quickly you respond."
+    },
+    {
+      "id": "faq-products",
+      "category": "Products",
+      "question": "Where can I find product details and availability?",
+      "answer": "Every product page shows the description, price and current availability. The availability label on each product comes straight from data/products.json, so it stays in sync with the catalogue."
+    },
+    {
+      "id": "faq-contact",
+      "category": "Support",
+      "question": "How do I contact the store?",
+      "answer": "Use the contact form on the Contact page or email the address listed there. The placeholder contact details live in data/site.json and can be replaced at any time."
+    }
+  ]
+}

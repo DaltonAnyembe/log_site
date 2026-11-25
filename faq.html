@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>FAQ | Sample Supply Co.</title>
+  <meta name="description" content="Frequently asked questions about orders, shipping, returns and support.">
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <script type="module" src="assets/js/nav.js"></script>
+  <script type="module" src="assets/js/faq.js"></script>
+  <script src="assets/js/serve-notice.js" defer></script>
+</head>
+<body data-page="faq">
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html">
+        <span class="brand-mark" aria-hidden="true">S</span>
+        <span class="brand-name" data-site-name>Sample Supply Co.</span>
+      </a>
+      <button class="nav-toggle" type="button" data-nav-toggle aria-expanded="false" aria-controls="primary-nav">Menu</button>
+      <div class="header-nav" id="primary-nav" data-primary-nav>
+        <nav aria-label="Primary">
+          <ul class="nav-list">
+            <li class="nav-home"><a href="index.html" data-nav="home">Home</a></li>
+            <li><a href="products.html" data-nav="products">Products</a></li>
+            <li><a href="faq.html" data-nav="faq">FAQ</a></li>
+            <li><a href="reviews.html" data-nav="reviews">Reviews</a></li>
+            <li><a href="contact.html" data-nav="contact">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <div class="container page-head">
+      <h1>Frequently asked questions</h1>
+      <p class="lede">Placeholder answers to the questions customers ask most. Edit or add entries in data/faqs.json.</p>
+      <p class="muted small" data-faq-count></p>
+    </div>
+
+    <div class="container faq" data-faq-list>
+      <p class="muted">Loading questions…</p>
+    </div>
+
+    <div class="container section">
+      <div class="callout">
+        <h2>Still need help?</h2>
+        <p>Send us a message and we will reply as soon as we can.</p>
+        <a class="button" href="contact.html">Contact us</a>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-block">
+        <p class="footer-brand" data-site-name>Sample Supply Co.</p>
+        <p class="footer-text" data-site-blurb>Placeholder storefront content. Update the branding, copy and contact details to match your business.</p>
+      </div>
+      <nav class="footer-block" aria-labelledby="footer-payments-heading">
+        <h2 class="footer-heading" id="footer-payments-heading">Payment Methods</h2>
+        <ul class="footer-links">
+          <li><span class="footer-currency" aria-hidden="true">₿</span>Bitcoin (BTC)</li>
+          <li><span class="footer-currency" aria-hidden="true">₮</span>Tether (USDT)</li>
+        </ul>
+      </nav>
+      <nav class="footer-block" aria-labelledby="footer-support-heading">
+        <h2 class="footer-heading" id="footer-support-heading">Support</h2>
+        <ul class="footer-links">
+          <li><a href="faq.html">FAQ</a></li>
+          <li><a href="reviews.html">Reviews</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="container footer-bottom">
+      <p>© <span data-current-year>2026</span> <span data-site-name>Sample Supply Co.</span> <span data-site-legal>All rights reserved.</span></p>
+    </div>
+  </footer>
+</body>
+</html>

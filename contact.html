@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contact | Sample Supply Co.</title>
+  <meta name="description" content="Contact the store with a question about products or an order.">
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <script type="module" src="assets/js/nav.js"></script>
+  <script type="module" src="assets/js/contact.js"></script>
+  <script src="assets/js/serve-notice.js" defer></script>
+</head>
+<body data-page="contact">
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html">
+        <span class="brand-mark" aria-hidden="true">S</span>
+        <span class="brand-name" data-site-name>Sample Supply Co.</span>
+      </a>
+      <button class="nav-toggle" type="button" data-nav-toggle aria-expanded="false" aria-controls="primary-nav">Menu</button>
+      <div class="header-nav" id="primary-nav" data-primary-nav>
+        <nav aria-label="Primary">
+          <ul class="nav-list">
+            <li class="nav-home"><a href="index.html" data-nav="home">Home</a></li>
+            <li><a href="products.html" data-nav="products">Products</a></li>
+            <li><a href="faq.html" data-nav="faq">FAQ</a></li>
+            <li><a href="reviews.html" data-nav="reviews">Reviews</a></li>
+            <li><a href="contact.html" data-nav="contact">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <div class="container page-head">
+      <h1>Contact us</h1>
+      <p class="lede">Send a question about a product or an order. Fields marked with an asterisk are required.</p>
+    </div>
+
+    <div class="container contact-layout">
+      <section class="contact-form-wrap" aria-labelledby="contact-form-heading">
+        <h2 id="contact-form-heading">Send a message</h2>
+
+        <div class="feedback-slot" data-contact-feedback tabindex="-1" hidden></div>
+
+        <form class="contact-form" data-contact-form novalidate>
+          <div class="field">
+            <label class="field__label" for="contact-name">Name <span class="required-mark" aria-hidden="true">*</span></label>
+            <input class="field__input" id="contact-name" name="name" type="text" autocomplete="name" required aria-describedby="contact-name-error">
+            <p class="field__error" id="contact-name-error" data-error-for="name" hidden></p>
+          </div>
+
+          <div class="field">
+            <label class="field__label" for="contact-email">Email <span class="required-mark" aria-hidden="true">*</span></label>
+            <input class="field__input" id="contact-email" name="email" type="email" autocomplete="email" required aria-describedby="contact-email-error">
+            <p class="field__error" id="contact-email-error" data-error-for="email" hidden></p>
+          </div>
+
+          <div class="field">
+            <label class="field__label" for="contact-subject">Subject <span class="required-mark" aria-hidden="true">*</span></label>
+            <input class="field__input" id="contact-subject" name="subject" type="text" required aria-describedby="contact-subject-error">
+            <p class="field__error" id="contact-subject-error" data-error-for="subject" hidden></p>
+          </div>
+
+          <div class="field">
+            <label class="field__label" for="contact-message">Message <span class="required-mark" aria-hidden="true">*</span></label>
+            <textarea class="field__input field__input--textarea" id="contact-message" name="message" rows="7" required aria-describedby="contact-message-error"></textarea>
+            <p class="field__error" id="contact-message-error" data-error-for="message" hidden></p>
+          </div>
+
+          <button class="button" type="submit">Send message</button>
+          <p class="muted small">This demo form checks your input in the browser. It is not connected to an email service yet, so no message is sent.</p>
+        </form>
+      </section>
+
+      <aside class="contact-details" aria-labelledby="contact-details-heading">
+        <h2 id="contact-details-heading">Store details</h2>
+        <dl class="contact-list">
+          <div class="contact-list__row">
+            <dt>Email</dt>
+            <dd><a href="mailto:hello@example.com" data-contact="email">hello@example.com</a></dd>
+          </div>
+          <div class="contact-list__row">
+            <dt>Phone</dt>
+            <dd><a href="tel:+15550100000" data-contact="phone">+1 (555) 010-0000</a></dd>
+          </div>
+          <div class="contact-list__row">
+            <dt>Address</dt>
+            <dd data-contact="address">123 Placeholder Street, Suite 100, Sample City, ST 00000</dd>
+          </div>
+          <div class="contact-list__row">
+            <dt>Opening hours</dt>
+            <dd data-contact="hours">Monday–Friday, 9:00–17:00</dd>
+          </div>
+        </dl>
+        <p class="muted small" data-contact="responseTime">We usually reply within two business days.</p>
+      </aside>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-block">
+        <p class="footer-brand" data-site-name>Sample Supply Co.</p>
+        <p class="footer-text" data-site-blurb>Placeholder storefront content. Update the branding, copy and contact details to match your business.</p>
+      </div>
+      <nav class="footer-block" aria-labelledby="footer-payments-heading">
+        <h2 class="footer-heading" id="footer-payments-heading">Payment Methods</h2>
+        <ul class="footer-links">
+          <li><span class="footer-currency" aria-hidden="true">₿</span>Bitcoin (BTC)</li>
+          <li><span class="footer-currency" aria-hidden="true">₮</span>Tether (USDT)</li>
+        </ul>
+      </nav>
+      <nav class="footer-block" aria-labelledby="footer-support-heading">
+        <h2 class="footer-heading" id="footer-support-heading">Support</h2>
+        <ul class="footer-links">
+          <li><a href="faq.html">FAQ</a></li>
+          <li><a href="reviews.html">Reviews</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="container footer-bottom">
+      <p>© <span data-current-year>2026</span> <span data-site-name>Sample Supply Co.</span> <span data-site-legal>All rights reserved.</span></p>
+    </div>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Self-test | Sample Supply Co.</title>
+  <meta name="robots" content="noindex">
+  <link rel="icon" href="../assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <style>
+    .test-results {
+      margin: 1.5rem 0;
+      padding: 0;
+      border-top: 1px solid var(--color-border);
+      list-style: none;
+    }
+
+    .test-result {
+      display: flex;
+      justify-content: space-between;
+      gap: 0.75rem;
+      padding: 0.55rem 0;
+      border-bottom: 1px solid var(--color-border);
+      font-size: 0.95rem;
+    }
+
+    .test-result__status {
+      flex: none;
+      font-weight: 700;
+    }
+
+    .test-result[data-status="pass"] .test-result__status {
+      color: var(--color-success);
+    }
+
+    .test-result[data-status="fail"] .test-result__status {
+      color: var(--color-danger);
+    }
+
+    .test-result__detail {
+      display: block;
+      color: var(--color-muted);
+      font-size: 0.85rem;
+    }
+  </style>
+  <script type="module" src="selftest.js"></script>
+  <script src="../assets/js/serve-notice.js" defer></script>
+</head>
+<body data-page="tests">
+  <main id="main" class="container" style="padding-top: 2.5rem; padding-bottom: 3rem;">
+    <h1>Self-test</h1>
+    <p class="lede">
+      Runs the shared search, pagination, validation and data-integrity rules in the browser.
+      Serve the site over HTTP (for example <code>python -m http.server 8000</code>) so the JSON
+      files and images can be fetched.
+    </p>
+    <p class="results-summary" data-test-summary role="status">Running tests…</p>
+    <ul class="test-results" data-test-results></ul>
+    <p class="muted small"><a href="../index.html">Back to the storefront</a></p>
+  </main>
+</body>
+</html>

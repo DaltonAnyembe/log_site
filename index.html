@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Home | Sample Supply Co.</title>
+  <meta name="description" content="Placeholder storefront for browsing a JSON-driven product catalogue.">
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <script type="module" src="assets/js/nav.js"></script>
+  <script type="module" src="assets/js/home.js"></script>
+  <script src="assets/js/serve-notice.js" defer></script>
+</head>
+<body data-page="home">
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html">
+        <span class="brand-mark" aria-hidden="true">S</span>
+        <span class="brand-name" data-site-name>Sample Supply Co.</span>
+      </a>
+      <button class="nav-toggle" type="button" data-nav-toggle aria-expanded="false" aria-controls="primary-nav">Menu</button>
+      <div class="header-nav" id="primary-nav" data-primary-nav>
+        <nav aria-label="Primary">
+          <ul class="nav-list">
+            <li class="nav-home"><a href="index.html" data-nav="home">Home</a></li>
+            <li><a href="products.html" data-nav="products">Products</a></li>
+            <li><a href="faq.html" data-nav="faq">FAQ</a></li>
+            <li><a href="reviews.html" data-nav="reviews">Reviews</a></li>
+            <li><a href="contact.html" data-nav="contact">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero">
+      <div class="container hero__inner">
+        <p class="eyebrow" data-hero-eyebrow>Placeholder storefront</p>
+        <h1 class="hero__title" data-hero-heading>A simple place to browse and sell your products</h1>
+        <p class="hero__text" data-hero-text>Every page here runs on placeholder data. Replace the files in /data with your own products, then update the branding and contact details.</p>
+        <form class="search-form search-form--hero" role="search" action="products.html" method="get">
+          <label class="visually-hidden" for="site-search">Search products</label>
+          <input class="search-form__input" id="site-search" type="search" name="q" placeholder="Search products" autocomplete="off" data-search-input>
+          <button class="search-form__button" type="submit">Search</button>
+        </form>
+        <div class="hero__actions">
+          <a class="button" href="products.html" data-hero-primary>Browse products</a>
+          <a class="button button--secondary" href="faq.html" data-hero-secondary>Read the FAQ</a>
+        </div>
+        <p class="muted small" data-hero-note>Product discovery only — no account, cart or checkout.</p>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="featured-heading">
+      <div class="container">
+        <div class="section-head">
+          <h2 id="featured-heading" data-featured-heading>Featured products</h2>
+          <a class="text-link" href="products.html">View all products</a>
+        </div>
+        <p class="muted" data-featured-text>A short selection taken from the catalogue. Mark items with "featured": true in data/products.json.</p>
+        <div class="product-grid" data-featured-products aria-live="polite">
+          <p class="muted">Loading products…</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-block">
+        <p class="footer-brand" data-site-name>Sample Supply Co.</p>
+        <p class="footer-text" data-site-blurb>Placeholder storefront content. Update the branding, copy and contact details to match your business.</p>
+      </div>
+      <nav class="footer-block" aria-labelledby="footer-payments-heading">
+        <h2 class="footer-heading" id="footer-payments-heading">Payment Methods</h2>
+        <ul class="footer-links">
+          <li><span class="footer-currency" aria-hidden="true">₿</span>Bitcoin (BTC)</li>
+          <li><span class="footer-currency" aria-hidden="true">₮</span>Tether (USDT)</li>
+        </ul>
+      </nav>
+      <nav class="footer-block" aria-labelledby="footer-support-heading">
+        <h2 class="footer-heading" id="footer-support-heading">Support</h2>
+        <ul class="footer-links">
+          <li><a href="faq.html">FAQ</a></li>
+          <li><a href="reviews.html">Reviews</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="container footer-bottom">
+      <p>© <span data-current-year>2026</span> <span data-site-name>Sample Supply Co.</span> <span data-site-legal>All rights reserved.</span></p>
+    </div>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,291 @@
+{
+  "lastUpdated": "2026-11-24",
+  "products": [
+    {
+      "id": "cash-app",
+      "name": "Cash App",
+      "category": "Digital gift cards",
+      "sku": "CA-65",
+      "price": 65.0,
+      "availability": { "status": "in_stock", "label": "In stock" },
+      "image": "assets/img/cash-app.svg",
+      "imageAlt": "Cash App icon: a white dollar sign on a green rounded square",
+      "shortDescription": "Cash App card worth $65, delivered as a digital code.",
+      "description": "A $65 Cash App card, delivered as a digital code by email. Enter the code in the Cash App to add the balance to your account. Check Cash App's terms for eligibility and any regional restrictions before ordering.",
+      "keywords": ["cash app", "cashapp", "gift card", "digital", "code", "65", "payment"],
+      "featured": true,
+      "specs": [
+        { "label": "Value", "value": "$65.00" },
+        { "label": "Format", "value": "Digital code" },
+        { "label": "Delivery", "value": "Emailed after purchase" },
+        { "label": "Reference", "value": "CA-65" }
+      ]
+    },
+    {
+      "id": "sample-product-01",
+      "name": "Sample Product 01",
+      "category": "Sample Category A",
+      "sku": "SMP-001",
+      "price": 24.0,
+      "availability": { "status": "in_stock", "label": "In stock" },
+      "image": "assets/img/product-placeholder-1.svg",
+      "imageAlt": "Placeholder image for Sample Product 01",
+      "shortDescription": "Placeholder summary for product 01 — replace with a one-line description.",
+      "description": "This is placeholder copy for Sample Product 01. Replace this paragraph in data/products.json with a full description covering materials, sizing, compatibility or anything else a customer needs to know before buying.",
+      "keywords": ["sample", "placeholder", "alpha", "starter", "demo"],
+      "featured": true,
+      "specs": [
+        { "label": "Reference", "value": "SMP-001" },
+        { "label": "Category", "value": "Sample Category A" },
+        { "label": "Sample spec", "value": "Value one" }
+      ]
+    },
+    {
+      "id": "sample-product-02",
+      "name": "Sample Product 02",
+      "category": "Sample Category A",
+      "sku": "SMP-002",
+      "price": 39.5,
+      "availability": { "status": "in_stock", "label": "In stock" },
+      "image": "assets/img/product-placeholder-2.svg",
+      "imageAlt": "Placeholder image for Sample Product 02",
+      "shortDescription": "Placeholder summary for product 02 — replace with a one-line description.",
+      "description": "This is placeholder copy for Sample Product 02. Replace this paragraph in data/products.json with a full description covering materials, sizing, compatibility or anything else a customer needs to know before buying.",
+      "keywords": ["sample", "placeholder", "alpha", "everyday", "demo"],
+      "featured": true,
+      "specs": [
+        { "label": "Reference", "value": "SMP-002" },
+        { "label": "Category", "value": "Sample Category A" },
+        { "label": "Sample spec", "value": "Value two" }
+      ]
+    },
+    {
+      "id": "sample-product-03",
+      "name": "Sample Product 03",
+      "category": "Sample Category B",
+      "sku": "SMP-003",
+      "price": 18.75,
+      "availability": { "status": "low_stock", "label": "Low stock" },
+      "image": "assets/img/product-placeholder-3.svg",
+      "imageAlt": "Placeholder image for Sample Product 03",
+      "shortDescription": "Placeholder summary for product 03 — replace with a one-line description.",
+      "description": "This is placeholder copy for Sample Product 03. Replace this paragraph in data/products.json with a full description covering materials, sizing, compatibility or anything else a customer needs to know before buying.",
+      "keywords": ["sample", "placeholder", "beta", "compact", "demo"],
+      "featured": true,
+      "specs": [
+        { "label": "Reference", "value": "SMP-003" },
+        { "label": "Category", "value": "Sample Category B" },
+        { "label": "Sample spec", "value": "Value three" }
+      ]
+    },
+    {
+      "id": "sample-product-04",
+      "name": "Sample Product 04",
+      "category": "Sample Category B",
+      "sku": "SMP-004",
+      "price": 62.0,
+      "availability": { "status": "in_stock", "label": "In stock" },
+      "image": "assets/img/product-placeholder-4.svg",
+      "imageAlt": "Placeholder image for Sample Product 04",
+      "shortDescription": "Placeholder summary for product 04 — replace with a one-line description.",
+      "description": "This is placeholder copy for Sample Product 04. Replace this paragraph in data/products.json with a full description covering materials, sizing, compatibility or anything else a customer needs to know before buying.",
+      "keywords": ["sample", "placeholder", "beta", "premium", "demo"],
+      "featured": true,
+      "specs": [
+        { "label": "Reference", "value": "SMP-004" },
+        { "label": "Category", "value": "Sample Category B" },
+        { "label": "Sample spec", "value": "Value four" }
+      ]
+    },
+    {
+      "id": "sample-product-05",
+      "name": "Sample Product 05",
+      "category": "Sample Category C",
+      "sku": "SMP-005",
+      "price": 45.0,
+      "availability": { "status": "out_of_stock", "label": "Out of stock" },
+      "image": "assets/img/product-placeholder-5.svg",
+      "imageAlt": "Placeholder image for Sample Product 05",
+      "shortDescription": "Placeholder summary for product 05 — replace with a one-line description.",
+      "description": "This is placeholder copy for Sample Product 05. Replace this paragraph in data/products.json with a full description covering materials, sizing, compatibility or anything else a customer needs to know before buying.",
+      "keywords": ["sample", "placeholder", "gamma", "limited", "demo"],
+      "featured": true,
+      "specs": [
+        { "label": "Reference", "value": "SMP-005" },
+        { "label": "Category", "value": "Sample Category C" },
+        { "label": "Sample spec", "value": "Value five" }
+      ]
+    },
+    {
+      "id": "sample-product-06",
+      "name": "Sample Product 06",
+      "category": "Sample Category C",
+      "sku": "SMP-006",
+      "price": 89.99,
+      "availability": { "status": "in_stock", "label": "In stock" },
+      "image": "assets/img/product-placeholder-6.svg",
+      "imageAlt": "Placeholder image for Sample Product 06",
+      "shortDescription": "Placeholder summary for product 06 — replace with a one-line description.",
+      "description": "This is placeholder copy for Sample Product 06. Replace this paragraph in data/products.json with a full description covering materials, sizing, compatibility or anything else a customer needs to know before buying.",
+      "keywords": ["sample", "placeholder", "gamma", "bundle", "demo"],
+      "featured": false,
+      "specs": [
+        { "label": "Reference", "value": "SMP-006" },
+        { "label": "Category", "value": "Sample Category C" },
+        { "label": "Sample spec", "value": "Value six" }
+      ]
+    },
+    {
+      "id": "sample-product-07",
+      "name": "Sample Product 07",
+      "category": "Sample Category A",
+      "sku": "SMP-007",
+      "price": 12.0,
+      "availability": { "status": "in_stock", "label": "In stock" },
+      "image": "assets/img/product-placeholder-7.svg",
+      "imageAlt": "Placeholder image for Sample Product 07",
+      "shortDescription": "Placeholder summary for product 07 — replace with a one-line description.",
+      "description": "This is placeholder copy for Sample Product 07. Replace this paragraph in data/products.json with a full description covering materials, sizing, compatibility or anything else a customer needs to know before buying.",
+      "keywords": ["sample", "placeholder", "alpha", "budget", "demo"],
+      "featured": false,
+      "specs": [
+        { "label": "Reference", "value": "SMP-007" },
+        { "label": "Category", "value": "Sample Category A" },
+        { "label": "Sample spec", "value": "Value seven" }
+      ]
+    },
+    {
+      "id": "sample-product-08",
+      "name": "Sample Product 08",
+      "category": "Sample Category A",
+      "sku": "SMP-008",
+      "price": 27.4,
+      "availability": { "status": "low_stock", "label": "Low stock" },
+      "image": "assets/img/product-placeholder-8.svg",
+      "imageAlt": "Placeholder image for Sample Product 08",
+      "shortDescription": "Placeholder summary for product 08 — replace with a one-line description.",
+      "description": "This is placeholder copy for Sample Product 08. Replace this paragraph in data/products.json with a full description covering materials, sizing, compatibility or anything else a customer needs to know before buying.",
+      "keywords": ["sample", "placeholder", "alpha", "seasonal", "demo"],
+      "featured": false,
+      "specs": [
+        { "label": "Reference", "value": "SMP-008" },
+        { "label": "Category", "value": "Sample Category A" },
+        { "label": "Sample spec", "value": "Value eight" }
+      ]
+    },
+    {
+      "id": "sample-product-09",
+      "name": "Sample Product 09",
+      "category": "Sample Category B",
+      "sku": "SMP-009",
+      "price": 54.0,
+      "availability": { "status": "in_stock", "label": "In stock" },
+      "image": "assets/img/product-placeholder-1.svg",
+      "imageAlt": "Placeholder image for Sample Product 09",
+      "shortDescription": "Placeholder summary for product 09 — replace with a one-line description.",
+      "description": "This is placeholder copy for Sample Product 09. Replace this paragraph in data/products.json with a full description covering materials, sizing, compatibility or anything else a customer needs to know before buying.",
+      "keywords": ["sample", "placeholder", "beta", "professional", "demo"],
+      "featured": false,
+      "specs": [
+        { "label": "Reference", "value": "SMP-009" },
+        { "label": "Category", "value": "Sample Category B" },
+        { "label": "Sample spec", "value": "Value nine" }
+      ]
+    },
+    {
+      "id": "sample-product-10",
+      "name": "Sample Product 10",
+      "category": "Sample Category B",
+      "sku": "SMP-010",
+      "price": 33.3,
+      "availability": { "status": "out_of_stock", "label": "Out of stock" },
+      "image": "assets/img/product-placeholder-2.svg",
+      "imageAlt": "Placeholder image for Sample Product 10",
+      "shortDescription": "Placeholder summary for product 10 — replace with a one-line description.",
+      "description": "This is placeholder copy for Sample Product 10. Replace this paragraph in data/products.json with a full description covering materials, sizing, compatibility or anything else a customer needs to know before buying.",
+      "keywords": ["sample", "placeholder", "beta", "classic", "demo"],
+      "featured": false,
+      "specs": [
+        { "label": "Reference", "value": "SMP-010" },
+        { "label": "Category", "value": "Sample Category B" },
+        { "label": "Sample spec", "value": "Value ten" }
+      ]
+    },
+    {
+      "id": "sample-product-11",
+      "name": "Sample Product 11",
+      "category": "Sample Category C",
+      "sku": "SMP-011",
+      "price": 76.5,
+      "availability": { "status": "in_stock", "label": "In stock" },
+      "image": "assets/img/product-placeholder-3.svg",
+      "imageAlt": "Placeholder image for Sample Product 11",
+      "shortDescription": "Placeholder summary for product 11 — replace with a one-line description.",
+      "description": "This is placeholder copy for Sample Product 11. Replace this paragraph in data/products.json with a full description covering materials, sizing, compatibility or anything else a customer needs to know before buying.",
+      "keywords": ["sample", "placeholder", "gamma", "gift", "demo"],
+      "featured": false,
+      "specs": [
+        { "label": "Reference", "value": "SMP-011" },
+        { "label": "Category", "value": "Sample Category C" },
+        { "label": "Sample spec", "value": "Value eleven" }
+      ]
+    },
+    {
+      "id": "sample-product-12",
+      "name": "Sample Product 12",
+      "category": "Sample Category C",
+      "sku": "SMP-012",
+      "price": 15.99,
+      "availability": { "status": "in_stock", "label": "In stock" },
+      "image": "assets/img/product-placeholder-4.svg",
+      "imageAlt": "Placeholder image for Sample Product 12",
+      "shortDescription": "Placeholder summary for product 12 — replace with a one-line description.",
+      "description": "This is placeholder copy for Sample Product 12. Replace this paragraph in data/products.json with a full description covering materials, sizing, compatibility or anything else a customer needs to know before buying.",
+      "keywords": ["sample", "placeholder", "gamma", "accessory", "demo"],
+      "featured": false,
+      "specs": [
+        { "label": "Reference", "value": "SMP-012" },
+        { "label": "Category", "value": "Sample Category C" },
+        { "label": "Sample spec", "value": "Value twelve" }
+      ]
+    },
+    {
+      "id": "sample-product-13",
+      "name": "Sample Product 13",
+      "category": "Sample Category A",
+      "sku": "SMP-013",
+      "price": 120.0,
+      "availability": { "status": "preorder", "label": "Pre-order" },
+      "image": "assets/img/product-placeholder-5.svg",
+      "imageAlt": "Placeholder image for Sample Product 13",
+      "shortDescription": "Placeholder summary for product 13 — replace with a one-line description.",
+      "description": "This is placeholder copy for Sample Product 13. Replace this paragraph in data/products.json with a full description covering materials, sizing, compatibility or anything else a customer needs to know before buying.",
+      "keywords": ["sample", "placeholder", "alpha", "upcoming", "demo"],
+      "featured": false,
+      "specs": [
+        { "label": "Reference", "value": "SMP-013" },
+        { "label": "Category", "value": "Sample Category A" },
+        { "label": "Sample spec", "value": "Value thirteen" }
+      ]
+    },
+    {
+      "id": "sample-product-14",
+      "name": "Sample Product 14",
+      "category": "Sample Category B",
+      "sku": "SMP-014",
+      "price": 8.45,
+      "availability": { "status": "out_of_stock", "label": "Out of stock" },
+      "image": "assets/img/product-placeholder-6.svg",
+      "imageAlt": "Placeholder image for Sample Product 14",
+      "shortDescription": "Placeholder summary for product 14 — replace with a one-line description.",
+      "description": "This is placeholder copy for Sample Product 14. Replace this paragraph in data/products.json with a full description covering materials, sizing, compatibility or anything else a customer needs to know before buying.",
+      "keywords": ["sample", "placeholder", "beta", "spare", "demo"],
+      "featured": false,
+      "specs": [
+        { "label": "Reference", "value": "SMP-014" },
+        { "label": "Category", "value": "Sample Category B" },
+        { "label": "Sample spec", "value": "Value fourteen" }
+      ]
+    }
+  ]
+}

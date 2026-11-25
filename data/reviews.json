@@ -1,0 +1,94 @@
+{
+  "lastUpdated": "2026-11-24",
+  "notice": "Every review below is dummy content written for this demo storefront. Replace the entries in data/reviews.json with genuine customer feedback, and set \"sample\": false once the text is real.",
+  "reviews": [
+    {
+      "id": "review-01",
+      "author": "Maya R.",
+      "location": "Austin, TX",
+      "rating": 5,
+      "title": "Fast delivery, exactly as described",
+      "body": "Ordered the Cash App card on a Friday evening and the code was in my inbox within minutes. Redeemed it without any trouble and the balance showed up straight away.",
+      "date": "2026-11-18",
+      "product": "Cash App",
+      "sample": true
+    },
+    {
+      "id": "review-02",
+      "author": "Daniel K.",
+      "location": "Portland, OR",
+      "rating": 5,
+      "title": "Second order, same great experience",
+      "body": "This is my second order from the shop. Clear pricing, a quick confirmation email and the code worked first time. I will keep coming back for the digital cards.",
+      "date": "2026-11-09",
+      "product": "Cash App",
+      "sample": true
+    },
+    {
+      "id": "review-03",
+      "author": "Priya S.",
+      "location": "Manchester, UK",
+      "rating": 5,
+      "title": "Simple checkout and quick email delivery",
+      "body": "The site is easy to browse and the checkout steps were clear from start to finish. My code arrived in about two minutes, which is quicker than I expected.",
+      "date": "2026-10-27",
+      "product": "Cash App",
+      "sample": true
+    },
+    {
+      "id": "review-04",
+      "author": "Tom H.",
+      "location": "Chicago, IL",
+      "rating": 5,
+      "title": "Good value for the price",
+      "body": "Compared a few shops before ordering and this was the best value I found. The product description was accurate and my question was answered the same day.",
+      "date": "2026-10-14",
+      "product": "Sample Product 02",
+      "sample": true
+    },
+    {
+      "id": "review-05",
+      "author": "Aisha B.",
+      "location": "Toronto, ON",
+      "rating": 4,
+      "title": "Happy with the purchase",
+      "body": "Everything matched the photos and the quality is what I hoped for at this price. Delivery took a day longer than the estimate, but the updates were helpful.",
+      "date": "2026-09-30",
+      "product": "Sample Product 04",
+      "sample": true
+    },
+    {
+      "id": "review-06",
+      "author": "Lucas M.",
+      "location": "Berlin, DE",
+      "rating": 4,
+      "title": "Smooth experience overall",
+      "body": "Browsing and checkout were straightforward and the confirmation email told me exactly what to expect. No complaints and I would order again.",
+      "date": "2026-09-12",
+      "product": "Sample Product 06",
+      "sample": true
+    },
+    {
+      "id": "review-07",
+      "author": "Grace T.",
+      "location": "Dublin, IE",
+      "rating": 4,
+      "title": "Does what it promises",
+      "body": "Simple product, fair price and no surprises. The product page answered all of my questions before I bought, which saved me a support message.",
+      "date": "2026-08-30",
+      "product": "Sample Product 09",
+      "sample": true
+    },
+    {
+      "id": "review-08",
+      "author": "Noah W.",
+      "location": "Seattle, WA",
+      "rating": 4,
+      "title": "Reliable and easy to use",
+      "body": "Ordered late in the evening and still had my code before I went to bed. The only small thing I would change is having a few more payment options at checkout.",
+      "date": "2026-08-04",
+      "product": "Sample Product 11",
+      "sample": true
+    }
+  ]
+}
