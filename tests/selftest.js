@@ -15,6 +15,21 @@ import {
 } from '../assets/js/core.js';
 import { CONTACT_LIMITS, isValidEmail, validateContact } from '../assets/js/validate.js';
 import { loadFaqs, loadProducts, loadReviews, loadSite } from '../assets/js/data.js';
+import {
+  bitcoinUri,
+  ethereumTransferUri,
+  explorerAddressUrl,
+  formatUnits,
+  isBitcoinAddress,
+  isEvmAddress,
+  methodQuote,
+  orderReference,
+  payableMethods,
+  paymentConfig,
+  paymentLink,
+  paymentMailto
+} from '../assets/js/payments.js';
+import { checkoutMarkup } from '../assets/js/checkout.js';
 
 const results = [];
 const resultsList = document.querySelector('[data-test-results]');
@@ -107,6 +122,84 @@ function testValidation() {
   check('message minimum is 10 characters', CONTACT_LIMITS.messageMin === 10);
 }
 
+function testPayments() {
+  const config = paymentConfig({});
+  const methods = payableMethods(config);
+  const btc = methods.find((method) => method.id === 'btc');
+  const usdt = methods.find((method) => method.id === 'usdt');
+
+  check('default config exposes Bitcoin and USDT', Boolean(btc && usdt));
+  check('bitcoin address passes validation', isBitcoinAddress('bc1qv8epx678qzs5e7nr4ftjtypm9vg3zhtwrckjpf'));
+  check('truncated bitcoin address is rejected', !isBitcoinAddress('bc1qv8epx678qzs5e7nr4ftjtypm9vg3zhtwrckjq'));
+  check('a single mistyped bitcoin character is rejected', !isBitcoinAddress('bc1qv8epx678qzs5e7nr4ftjtypm9vg3zhtwrckjpg'));
+  check('usdt address passes validation', isEvmAddress('0x7E2474834091A0Aa7aCc02a92468BE41A0c5722b'));
+  check('short usdt address is rejected', !isEvmAddress('0x7E2474834091A0Aa7aCc02a92468BE41A0c5722'));
+
+  equal('formatUnits renders satoshis', formatUnits(68421, 8), '0.00068421');
+  equal('formatUnits keeps stablecoin cents', formatUnits(65000000, 6, 2), '65.00');
+
+  const btcQuote = methodQuote(btc, 65);
+  equal('$65 at $95,000 quotes 0.00068421 BTC', btcQuote.amount, '0.00068421');
+  equal('bitcoin quote is labelled with the ticker', btcQuote.amountLabel, '0.00068421 BTC');
+
+  const usdtQuote = methodQuote(usdt, 65);
+  equal('$65 quotes 65.00 USDT', usdtQuote.amount, '65.00');
+  equal('USDT units use six decimals', usdtQuote.units, 65000000);
+  check('zero prices are not quoted', methodQuote(btc, 0) === null);
+
+  equal(
+    'bitcoin link carries amount and label',
+    bitcoinUri({ address: btc.address, amount: '0.00068421', label: 'Order SSC-1' }),
+    'bitcoin:bc1qv8epx678qzs5e7nr4ftjtypm9vg3zhtwrckjpf?amount=0.00068421&label=Order%20SSC-1'
+  );
+  equal(
+    'eip-681 builder encodes the USDT transfer',
+    ethereumTransferUri({ contract: usdt.contract, address: usdt.address, units: 65000000, chainId: 1 }),
+    'ethereum:0xdAC17F958D2ee523a2206206994597C13D831ec7@1/transfer?address=0x7E2474834091A0Aa7aCc02a92468BE41A0c5722b&uint256=65000000'
+  );
+  equal(
+    'paymentLink uses the bitcoin scheme',
+    paymentLink(btc, btcQuote),
+    'bitcoin:bc1qv8epx678qzs5e7nr4ftjtypm9vg3zhtwrckjpf?amount=0.00068421'
+  );
+  equal('explorer link targets the btc address', explorerAddressUrl(btc), `https://mempool.space/address/${btc.address}`);
+  equal(
+    'order reference uses the UTC date and code',
+    orderReference({ prefix: 'SSC', now: new Date('2026-11-26T12:00:00Z'), random: () => 0 }),
+    'SSC-261126-AAAA'
+  );
+  check(
+    'mailto link pre-fills the reference',
+    paymentMailto({
+      email: 'hello@example.com',
+      product: { name: 'Cash App' },
+      method: usdt,
+      quote: usdtQuote,
+      reference: 'SSC-261126-AAAA'
+    }).includes('SSC-261126-AAAA')
+  );
+
+  const incomplete = paymentConfig({ methods: { btc: { address: 'not-an-address' } } });
+  check(
+    'invalid addresses remove the method from checkout',
+    !payableMethods(incomplete).some((method) => method.id === 'btc')
+  );
+
+  const site = { currency: 'USD', locale: 'en-US', contact: { email: 'hello@example.com' } };
+  const product = { id: 'cash-app', name: 'Cash App', price: 65, sku: 'CA-65', image: 'assets/img/cash-app.svg' };
+  const markup = checkoutMarkup({ product, site, config, reference: 'SSC-261126-AAAA' });
+  check(
+    'checkout markup shows both wallet links',
+    markup.includes('bitcoin:bc1qv8epx678qzs5e7nr4ftjtypm9vg3zhtwrckjpf') &&
+      markup.includes('ethereum:0xdAC17F958D2ee523a2206206994597C13D831ec7@1/transfer')
+  );
+  check('checkout markup shows the order reference', markup.includes('SSC-261126-AAAA'));
+  check(
+    'checkout markup escapes product names',
+    !checkoutMarkup({ product: { ...product, name: '<img src=x>' }, site, config, reference: 'SSC-TEST' }).includes('<img src=x')
+  );
+}
+
 async function testData() {
   const [site, products, faqs, reviews] = await Promise.all([
     loadSite(),
@@ -142,6 +235,15 @@ async function testData() {
     `featured ${featured.length}, limit ${site.featuredLimit}`
   );
   equal('site page size is 6', site.productsPerPage, 6);
+
+  check(
+    'site.json publishes the bitcoin receiving address',
+    site.payments?.methods?.btc?.address === 'bc1qv8epx678qzs5e7nr4ftjtypm9vg3zhtwrckjpf'
+  );
+  check(
+    'site.json publishes the usdt receiving address',
+    site.payments?.methods?.usdt?.address === '0x7E2474834091A0Aa7aCc02a92468BE41A0c5722b'
+  );
 
   equal('FAQ questions are unique', new Set(faqs.map((faq) => faq.question)).size, faqs.length);
   check(
@@ -181,6 +283,7 @@ async function testData() {
 testSearch();
 testPagination();
 testValidation();
+testPayments();
 
 testData()
   .catch((error) => {

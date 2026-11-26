@@ -5,6 +5,8 @@
 
 import { FALLBACK_SITE, loadProducts, loadSite } from './data.js';
 import { availabilityBadge, escapeHtml, formatPrice, renderLoadError, renderNotice } from './ui.js';
+import { methodQuote, payableMethods, paymentConfig } from './payments.js';
+import { mountCheckout } from './checkout.js';
 
 const root = document.querySelector('[data-product-detail]');
 const breadcrumbCurrent = document.querySelector('[data-breadcrumb-current]');
@@ -34,6 +36,18 @@ function renderProduct(product, site) {
   const availability = product.availability ?? {};
   const inStock = typeof availability === 'object' ? availability.status !== 'out_of_stock' : true;
 
+  const payments = paymentConfig(site.payments);
+  const payable = payableMethods(payments).filter((method) => methodQuote(method, product.price));
+  const paymentNames = payable.map((method) => method.label || method.id).join(' or ');
+  const purchaseBlock = !inStock
+    ? ''
+    : payable.length > 0
+      ? `<div class="purchase">
+          <button class="button button--block purchase__button" type="button" data-checkout-open>Buy now</button>
+          <p class="purchase__note">Pay with ${escapeHtml(paymentNames)}. An order reference is created at checkout.</p>
+        </div>`
+      : `<p class="muted small purchase--unavailable">Online payment is temporarily unavailable. <a href="contact.html">Contact us to order</a>.</p>`;
+
   document.title = `${product.name} | ${site.name || FALLBACK_SITE.name}`;
   if (breadcrumbCurrent) breadcrumbCurrent.textContent = product.name;
 
@@ -51,6 +65,7 @@ function renderProduct(product, site) {
           ${product.featured === true ? '<span class="badge badge--featured">Featured</span>' : ''}
           ${product.sku ? `<span class="muted small">Reference: ${escapeHtml(product.sku)}</span>` : ''}
         </p>
+        ${purchaseBlock}
         ${product.shortDescription ? `<p class="lede">${escapeHtml(product.shortDescription)}</p>` : ''}
         <div class="prose">${paragraphs(product.description)}</div>
         ${
@@ -111,6 +126,13 @@ async function init() {
   }
 
   renderProduct(product, site);
+
+  mountCheckout({
+    product,
+    site,
+    config: paymentConfig(site.payments),
+    trigger: root.querySelector('[data-checkout-open]')
+  });
 }
 
 init();
